@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node node_modules/.bin/lab"
+    "test": "node node_modules/.bin/lab -r threshold -t 100"
   },
   "repository": {
     "type": "git",
