@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/.bin/lab"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/nodekc/diamonator/issues"
   },
-  "homepage": "https://github.com/nodekc/diamonator"
+  "homepage": "https://github.com/nodekc/diamonator",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "lab": "1.x.x"
+  }
 }
