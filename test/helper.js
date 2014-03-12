@@ -22,4 +22,6 @@ exports.createServer = function () {
         server.emit('request', req, res);
         res.once('finish', callback);
     };
+
+    return server;
 };
