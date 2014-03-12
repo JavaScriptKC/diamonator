@@ -1,0 +1,25 @@
+{
+  "name": "diamonator",
+  "version": "0.0.1",
+  "description": "Simple router",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodekc/diamonator.git"
+  },
+  "keywords": [
+    "router"
+  ],
+  "author": "nodekc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodekc/diamonator/issues"
+  },
+  "homepage": "https://github.com/nodekc/diamonator"
+}
