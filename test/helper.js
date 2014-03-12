@@ -14,13 +14,16 @@ exports.createServer = function () {
 
         var res = new Stream.PassThrough();
         res.result = '';
-        res.on('readable', function (chunk) {
+        res.on('readable', function () {
 
-            res.result += chunk.toString();
+            res.result += res.read().toString();
         });
 
         server.emit('request', req, res);
-        res.once('finish', callback);
+        res.once('end', function () {
+
+            callback(res);
+        });
     };
 
     return server;

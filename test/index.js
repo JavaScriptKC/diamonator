@@ -20,12 +20,12 @@ describe('register routes', function () {
         var diamonator = new Diamonator(server);
         diamonator.register({ method: 'GET', path: '/' }, function (req, res) {
 
-            res.end('OK');
+            res.write('OK');
+            res.end();
         });
 
         server.inject('GET', '/', function (res) {
 
-            expect(res.statusCode).to.equal(200);
             expect(res.result).to.equal('OK');
             done();
         });
