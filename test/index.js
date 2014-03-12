@@ -1,5 +1,6 @@
-var Http = require('http');
 var lab = require('lab');
+var Helper = require('./helper');
+var Http = require('http');
 var Diamonator = require('../');
 
 
@@ -16,19 +17,15 @@ describe('register routes', function () {
 
     it('GET /', function (done) {
 
-        var server = Http.createServer(function (req, res) {
+        var server = Http.createServer();
+        var diamonator = new Diamonator(server);
+        diamonator.register({ method: 'GET', path: '/' }, function (req, res) {
 
-            diamonator.route(req.method, req.path);
+
         });
 
-        var fn = function () {
+        server.inject('GET', '/', function (result) {
 
-
-        };
-
-        var diamonator = new Diamonator();
-        diamonator.register({ method: 'GET', path: '/' }, fn);
-
-
+        });
     });
 });
